@@ -1,0 +1,36 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_LayoutSistema.cshtml";
+    ViewBag.Title = "Conheça mais sobre as profissões da área";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <h1 class="text-center">@ViewBag.Title</h1>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <h3>Programador</h3>
+        <br />
+        <p>
+            Conheça uma das atividades mais valorizadas do mercado de trabalho atual, a de programador!
+        </p>
+        <br />
+        <p style="color:black">
+            O domínio de diferentes linguagens de programação é uma atividade que, há anos, figura entre as mais importantes do mercado de trabalho.
+
+            E essa tendência deve permanecer ainda por muito tempo, acompanhando a crescente informatização de todos os setores da sociedade.
+
+            Para quem tem facilidade com números e raciocínio lógico, a profissão é um prato cheio.
+
+        </p>
+
+
+    </div>
+}
+
+

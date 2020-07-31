@@ -1,0 +1,22 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Quem Somos";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <h1 class="text-center">@ViewBag.Title</h1>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <br />
+        <p>
+            Somos o Noah Tech
+        </p>
+    </div>
+}
+

@@ -1,0 +1,34 @@
+npm install ou yarn
+yarn start
+
+
+exemplo resetPassaword
+criar uma pagina parecida com essa com outra rota
+
+clicar no link => abrir uma page do hermes
+deixar o feedback do pq esta saindo
+
+criar nova nota no mainroute
+cancelarinscrição
+criar pagina no pages
+input e textarea ou radiobutton na pagina de cancelar
+
+gitcheckout develop
+
+readme escrever as coisas
+
+paginas criar pagina portifolio ou sistemas pode criar js
+sempre colocar dentro de constante
+
+section js e mudar para jsx
+parar o servidor para ele ler o jsx ao enves de js
+fazer em todos os componentes
+nome do componente nome do arquivo
+
+git================
+git checkout -b develop (sempre na develop)
+git add .
+git status
+git commit -m "(refatorar componente tal)nome do commit"
+git push 
+

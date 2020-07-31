@@ -1,0 +1,63 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Inspiração";
+
+}
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+    <div>
+        <h1 class="text-center">@ViewBag.Title</h1>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <p align="left" >
+            <figure><img src="~/img/inspire-se1.PNG" width=400 height=200 /></figure>
+            Este artigo mostra como adicionar, exibir e manipular imagens (redimensionar, virar e adicionar marcas-d ' água) em um site Páginas da Web do ASP.NET (Razor).
+            O que você aprenderá:
+            Como adicionar uma imagem a uma página dinamicamente.
+            Como permitir que os usuários carreguem uma imagem.
+            Como redimensionar uma imagem.
+            Como inverter ou girar uma imagem.
+            Como adicionar uma marca d' água a uma imagem.
+            Como usar uma imagem como uma marca d' água.
+            Estes são os recursos de programação do ASP.NET apresentados no artigo:
+            O auxiliar de WebImage.
+            O objeto Path, que fornece métodos que permitem manipular nomes de arquivo e caminho.
+        </p>
+        <br />
+        <br />
+        <br />
+        <p align="left" font-family="Times, serif">
+            <figure><img src="~/img/inspire-se2.PNG" width=400 height=200 /></figure>
+            Histórias inspiradoras
+            Este artigo mostra como adicionar, exibir e manipular imagens (redimensionar, virar e adicionar marcas-d ' água) em um site Páginas da Web do ASP.NET (Razor).
+            O que você aprenderá:
+            Como adicionar uma imagem a uma página dinamicamente.
+            Como permitir que os usuários carreguem uma imagem.
+            Como redimensionar uma imagem.
+            Como inverter ou girar uma imagem.
+            Como adicionar uma marca d' água a uma imagem.
+            Como usar uma imagem como uma marca d' água.
+            Estes são os recursos de programação do ASP.NET apresentados no artigo:
+            O auxiliar de WebImage.
+            O objeto Path, que fornece métodos que permitem manipular nomes de arquivo e caminho.
+            Este artigo mostra como adicionar, exibir e manipular imagens (redimensionar, virar e adicionar marcas-d ' água) em um site Páginas da Web do ASP.NET (Razor).
+            O que você aprenderá:
+            Como adicionar uma imagem a uma página dinamicamente.
+            Como permitir que os usuários carreguem uma imagem.
+            Como redimensionar uma imagem.
+            Como inverter ou girar uma imagem.
+            Como adicionar uma marca d' água a uma imagem.
+            Como usar uma imagem como uma marca d' água.
+            Estes são os recursos de programação do ASP.NET apresentados no artigo:
+            O auxiliar de WebImage.
+            O objeto Path, que fornece métodos que permitem manipular nomes de arquivo e caminho.
+
+        </p>
+    </div>
+}
+

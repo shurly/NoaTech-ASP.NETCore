@@ -1,0 +1,29 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_LayoutSistema.cshtml";
+    ViewBag.Title = "Responda o formulário";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <h1 class="text-center">Qual caminho trilhar?</h1>
+        <p class="text-center">Nós da NoaTech queremos entender melhor suas vontadades e necessidades!</p>
+        <p class="text-center">Para melhor orientarmos qual a trilha mais indicada a seguir, por favor responda o questionário abaixo.</p>
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <iframe class="center" src="https://docs.google.com/forms/d/e/1FAIpQLSfgJ_mCPXNhJTmrStWAvEGpX-LEq8RSB-x5isn9B3nz2YJt7g/viewform?embedded=true"
+                width="1100" height="1313" frameborder="0" marginheight="0" marginwidth="0">
+            Carregando…
+        </iframe>
+
+    </div>
+
+}
+

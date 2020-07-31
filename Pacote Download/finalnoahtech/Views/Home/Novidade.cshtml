@@ -1,0 +1,28 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_LayoutSistema.cshtml";
+    ViewBag.Title = "Aqui você confere as novidades da área da tecnologia em primeira mão";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <body>
+        <div class="text-center">
+            <h1 class="text-center">@ViewBag.Title</h1>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <p>
+                <figure><img src="~/img/meninas programando1.PNG" width=400 height=200  /></figure>
+                
+            </p>
+
+
+        </div>
+    </body>
+}
+

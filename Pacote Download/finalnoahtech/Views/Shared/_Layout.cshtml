@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Noah Tech</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+    <header>
+      
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <img src="~/img/TOPO.png" width=1100 height=300 align="left" float="top" margin="0.5em"
+                     padding="0.5em" />
+            </div>
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Form">Formulário</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Novidade">Novidades</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Profissoes">Profissões</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="About">Sobre</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Inspiracao">Inspire-se</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="Home" asp-action="Eventos">Eventos</a>
+                    <a class="btn btn-secondary dropdown" asp-area="" asp-controller="FaleConosco" asp-action="FaleConosco">Contato</a>
+
+                </div>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cursos
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://go.hotmart.com/M36578779J">Lógica de Programação</a>
+                        <a class="dropdown-item" href="https://go.hotmart.com/P36575266H">Aprenda C#</a>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="nav navbar-nav navbar">
+
+                  
+
+
+
+                    @{
+                        Context.Request.Cookies.TryGetValue("Email", out string value);
+
+
+
+                        if (value != null)
+                        {
+
+
+
+                            if (value.ToString() != "")
+                            {
+
+                                <li class="nav navbar-brand">
+                                    <a class="btn btn-danger dropdown" asp-area="" asp-controller="Publico" asp-action="Logout">Sair</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <script type="text/javascript">
+                                    window.location.href="@Url.Action("AcessoNegado" , "Publico")"
+                                </script>
+                            }
+                        }
+                        else
+                        {
+
+                            <script type="text/javascript">
+                                    window.location.href = "@Url.Action("Logar" , "Publico")"
+
+                            </script>
+
+                        }
+                    }
+
+                </div>
+
+            </div>
+        </div>
+        @RenderBody()
+    </header>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Noahtech - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+
